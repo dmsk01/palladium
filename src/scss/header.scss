@@ -1,0 +1,149 @@
+//====================================================================================================
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 117px;
+  color: #fff;
+  background: rgba($color: #fff, $alpha: 0.1);
+  @supports (
+    (-webkit-backdrop-filter: blur(25px)) or (backdrop-filter: blur(25px))
+  ) {
+    background: rgba($color: #fff, $alpha: 0.1);
+    backdrop-filter: blur(25px);
+  }
+  &__container {
+    min-height: inherit;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    min-height: inherit;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__menu {
+  }
+}
+.menu {
+  &__icon {
+  }
+
+  &__body {
+    min-height: 100%;
+    @media (max-width: $tablet) {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      z-index: 4;
+      width: 100%;
+      height: 100vh;
+      overflow-y: auto;
+      background-color: #000;
+      transition: left 0.3s ease;
+      padding: 120px 20px 30px 20px;
+      &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: -100%;
+        display: inline-block;
+        width: 100%;
+        height: 117px;
+        z-index: 3;
+        transition: left 0.3s ease;
+        background: #000;
+      }
+      .menu-open & {
+        left: 0;
+        &::before {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &__list {
+    @media (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 86px;
+    }
+    @media (max-width: $pc) {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    line-height: math.div(27, 20);
+    font-family: "Playfair Display", serif;
+  }
+}
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+  display: none;
+  @media (max-width: $tablet) {
+    display: block;
+    position: relative;
+    width: rem(30);
+    height: rem(18);
+    cursor: pointer;
+    z-index: 5;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: #fff;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - rem(1));
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before,
+      &::after {
+      }
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
