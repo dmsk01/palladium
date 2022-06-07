@@ -1,3 +1,80 @@
 //====================================================================================================
+.footer {
+  background: #1f1f21;
+  padding: 85px;
+  &__container {
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__back-contact {
+  }
+
+  &__title {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    line-height: math.div(64, 48);
+    color: #fff;
+    margin-bottom: 80px;
+  }
+
+  &__form {
+  }
+
+  &__map {
+  }
+
+  &__contacts {
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__tel {
+    color: #68686b;
+    font-size: 22px;
+    line-height: math.div(29, 22);
+  }
+
+  &__address {
+    color: #68686b;
+    font-size: 22px;
+    line-height: math.div(29, 22);
+  }
+  &__social {
+  }
+}
+.form {
+  color: #858585;
+  &__input {
+    margin-bottom: 25px;
+    &::placeholder {
+      color: #858585;
+      font-size: 24px;
+      line-height: math.div(32, 24);
+    }
+  }
+
+  &__checkbox {
+    margin-bottom: 53px;
+  }
+
+  &__button {
+  }
+}
+.checkbox {
+  &__input {
+  }
+
+  &__label {
+  }
+
+  &__text {
+  }
+}
 
 //====================================================================================================

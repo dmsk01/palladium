@@ -58,12 +58,7 @@
   }
 
   &__button {
-    padding: 17px 30px;
-    background: #fff;
-    color: #000;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: math.div(26, 20);
+   
   }
 
   &__footer {
@@ -93,13 +88,5 @@
   &__image {
   }
 }
-.social-block {
-  display: flex;
-  align-items: center;
-  li:not(:last-child) {
-    margin-right: 22px;
-  }
-  &__link {
-  }
-}
+
 //========================================================================================================================================================
