@@ -14,6 +14,15 @@
     background: rgba($color: #fff, $alpha: 0.1);
     backdrop-filter: blur(25px);
   }
+  @media (max-width: $pc) {
+    min-height: 96px;
+  }
+  @media (max-width: $mobile) {
+    min-height: 53px;
+  }
+  @media (max-width: $mobileSmall) {
+    min-height: 35px;
+  }
   &__container {
     min-height: inherit;
   }
@@ -29,6 +38,14 @@
   &__logo {
     position: relative;
     z-index: 5;
+    @media (max-width: $mobile) {
+      width: 53px;
+      height: 53px;
+    }
+    @media (max-width: $mobileSmall) {
+      width: 43px;
+      height: 43px;
+    }
   }
 
   &__menu {
@@ -62,6 +79,15 @@
         z-index: 3;
         transition: left 0.3s ease;
         background: #000;
+        @media (max-width: $pc) {
+          height: 96px;
+        }
+        @media (max-width: $mobile) {
+          height: 53px;
+        }
+        @media (max-width: $mobileSmall) {
+          height: 35px;
+        }
       }
       .menu-open & {
         left: 0;
@@ -85,7 +111,7 @@
     }
     @media (max-width: $pc) {
       &:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 22px;
       }
     }
     @media (max-width: $tablet) {
@@ -98,6 +124,10 @@
     font-size: 20px;
     line-height: math.div(27, 20);
     font-family: "Playfair Display", serif;
+    @media (max-width: $pc) {
+      font-size: 16px;
+      line-height: math.div(21, 16);
+    }
   }
 }
 
@@ -108,47 +138,57 @@
 .icon-menu {
   display: none;
   @media (max-width: $tablet) {
-    display: block;
-    position: relative;
-    width: rem(30);
-    height: rem(18);
-    cursor: pointer;
-    z-index: 5;
-    span,
+    display: flex;
+    align-items: center;
+  }
+}
+
+.icon-text {
+  position: relative;
+  z-index: 5;
+}
+
+.icon-burger {
+  position: relative;
+  width: rem(10);
+  height: rem(7);
+  margin-right: 4px;
+  cursor: pointer;
+  z-index: 5;
+  span,
+  &::before,
+  &::after {
+    content: "";
+    transition: all 0.3s ease 0s;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: rem(1);
+    background-color: #fff;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+  span {
+    top: calc(50% - rem(1));
+  }
+  .menu-open & {
+    span {
+      width: 0;
+    }
     &::before,
     &::after {
-      content: "";
-      transition: all 0.3s ease 0s;
-      right: 0;
-      position: absolute;
-      width: 100%;
-      height: rem(2);
-      background-color: #fff;
     }
     &::before {
-      top: 0;
+      top: calc(50% - rem(0.37));
+      transform: rotate(-45deg);
     }
     &::after {
-      bottom: 0;
-    }
-    span {
-      top: calc(50% - rem(1));
-    }
-    .menu-open & {
-      span {
-        width: 0;
-      }
-      &::before,
-      &::after {
-      }
-      &::before {
-        top: calc(50% - rem(1));
-        transform: rotate(-45deg);
-      }
-      &::after {
-        bottom: calc(50% - rem(1));
-        transform: rotate(45deg);
-      }
+      bottom: calc(50% - rem(0.37));
+      transform: rotate(45deg);
     }
   }
 }
