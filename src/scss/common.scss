@@ -6,6 +6,9 @@
   font-size: 20px;
   font-weight: 500;
   line-height: math.div(26, 20);
+  @media (max-width: $mobileSmall) {
+    width: 100%;
+  }
 }
 
 .social-block {
