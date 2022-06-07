@@ -39,5 +39,9 @@
   &__text {
     font-size: 16px;
     line-height: math.div(21, 16);
+    @media (max-width: $mobileSmall) {
+      font-size: 10px;
+      line-height: math.div(13, 10);
+    }
   }
 }

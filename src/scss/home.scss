@@ -271,3 +271,141 @@
     }
   }
 }
+
+// Advantages section ========================================================================================================================================================
+
+.advantages {
+  padding: 60px 0 15px;
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    @media (max-width: 1200px) {
+      margin: 0 -16px;
+    }
+  }
+
+  &__item {
+    flex: 0 1 33.33%;
+    margin-bottom: 60px;
+    @media (max-width: 1200px) {
+      padding: 0 16px;
+    }
+    @media (max-width: $mobile) {
+      flex: 0 1 50%;
+      &:nth-child(3) {
+        flex: 1 1 100%;
+      }
+    }
+    @media (max-width: 580px) {
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.item-advantage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  &__image {
+    margin-bottom: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  &__description {
+    text-align: center;
+    white-space: pre-line;
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    line-height: math.div(32, 18);
+    @media (max-width: 1200px) {
+      font-size: 16px;
+      line-height: math.div(28, 16);
+      white-space: normal;
+    }
+    @media (max-width: $mobile) {
+      max-width: 298px;
+    }
+  }
+}
+
+// Reviews section ========================================================================================================================================================
+.reviews {
+  padding: 65px 0 85px;
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    @media (max-width: $pc) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: $tablet) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: $mobileSmall) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    @media (max-width: 580px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    flex: 0 1 452px;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+    @media (max-width: $mobile) {
+      flex: 0 1 50%;
+      &:first-child {
+        display: none;
+      }
+    }
+    @media (max-width: 580px) {
+      &:first-child {
+        display: block;
+      }
+      flex: 1 1 100%;
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.item-reviews {
+  padding: 47px 47px 61px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  @media (max-width: 1200px) {
+    padding: 30px 7px;
+  }
+  &__text {
+    font-size: 18px;
+    line-height: math.div(32, 18);
+    @media (max-width: $pc) {
+      font-size: 16px;
+      line-height: math.div(28, 16);
+    }
+  }
+}
