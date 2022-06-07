@@ -50,7 +50,7 @@
       overflow-y: auto;
       background-color: #000;
       transition: left 0.3s ease;
-      padding: 120px 20px 30px 20px;
+      padding: 160px 20px 30px 20px;
       &::before {
         content: "";
         position: fixed;
@@ -87,6 +87,10 @@
       &:not(:last-child) {
         margin-right: 30px;
       }
+    }
+    @media (max-width: $tablet) {
+      margin-right: 0;
+      margin-bottom: 30px;
     }
   }
 

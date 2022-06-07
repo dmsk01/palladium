@@ -10,7 +10,7 @@
 
   &__inner {
     margin-bottom: 60px;
-    @media (min-width: $pc) {
+    @media (min-width: $tablet) {
       display: flex;
       justify-content: space-between;
       margin-bottom: 140px;
@@ -19,17 +19,13 @@
 
   &__back-contact {
     margin-right: 25px;
-    @media (max-width: $pc) {
+    @media (max-width: $tablet) {
       margin-bottom: 40px;
       margin-right: 0;
     }
   }
 
   &__title {
-    font-family: "Playfair Display", serif;
-    font-size: 48px;
-    line-height: math.div(64, 48);
-    color: #fff;
     margin-bottom: 80px;
     @media (max-width: $mobile) {
       font-size: 28px;
@@ -46,7 +42,7 @@
     flex: 0 1 940px;
     max-width: 940px;
     width: 100%;
-    @media (max-width: $pc) {
+    @media (max-width: $tablet) {
       flex: 1 1 100%;
       max-width: none;
     }
