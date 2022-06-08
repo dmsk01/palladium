@@ -25,15 +25,8 @@ import "../../scss/base/swiper.scss";
 
 // Инициализация слайдеров
 function initSliders() {
-  // Перечень слайдеров
-  // Проверяем, есть ли слайдер на стронице
-  if (document.querySelector(".swiper")) {
-    // Указываем скласс нужного слайдера
-    // Создаем слайдер
-    new Swiper(".swiper", {
-      // Указываем скласс нужного слайдера
-      // Подключаем модули слайдера
-      // для конкретного случая
+  if (document.querySelector(".about-swiper")) {
+    new Swiper(".about-swiper", {
       modules: [Navigation, Pagination],
       observer: true,
       observeParents: true,
@@ -76,6 +69,150 @@ function initSliders() {
       navigation: {
         prevEl: ".swiper-button-prev",
         nextEl: ".swiper-button-next",
+      },
+
+      // Брейкпоинты
+      /*
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1268: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+				},
+			},
+			*/
+      // События
+      on: {},
+    });
+  }
+  if (document.querySelector(".catalog-swiper")) {
+    new Swiper(".catalog-swiper", {
+      modules: [Navigation, Pagination],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      autoHeight: true,
+      speed: 800,
+
+      //touchRatio: 0,
+      //simulateTouch: false,
+      //loop: true,
+      //preloadImages: false,
+      //lazy: true,
+
+      /*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+      // Пагинация
+
+      pagination: {
+        el: ".catalog__paggination.swiper-pagination",
+        clickable: true,
+      },
+
+      // Скроллбар
+      /*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+      // Кнопки "влево/вправо"
+      navigation: {
+        prevEl: ".catalog-swiper-button-prev",
+        nextEl: ".catalog-swiper-button-next",
+      },
+
+      // Брейкпоинты
+      /*
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1268: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+				},
+			},
+			*/
+      // События
+      on: {},
+    });
+  }
+  if (document.querySelector(".facade-swiper")) {
+    new Swiper(".facade-swiper", {
+      modules: [Navigation, Pagination],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      autoHeight: true,
+      speed: 800,
+
+      //touchRatio: 0,
+      //simulateTouch: false,
+      //loop: true,
+      //preloadImages: false,
+      //lazy: true,
+
+      /*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+      // Пагинация
+
+      pagination: {
+        el: ".catalog__paggination.swiper-pagination",
+        clickable: true,
+      },
+
+      // Скроллбар
+      /*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+      // Кнопки "влево/вправо"
+      navigation: {
+        prevEl: ".catalog-swiper-button-prev",
+        nextEl: ".catalog-swiper-button-next",
       },
 
       // Брейкпоинты
