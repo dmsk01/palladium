@@ -6,14 +6,14 @@
       rgba(25, 25, 29, 0.75) 0
     ),
     url("@img/hero-bg.jpg") 0 0 / cover no-repeat;
-  padding: 53px 0 20px;
+  padding: 53px 0 25px;
   color: #fff;
   @media (min-width: $mobile) {
     padding: 96px 0 55px;
   }
   @media (min-width: $tablet) {
-    min-height: 100vh;
-    padding: 117px 0 83px;
+    // min-height: 100vh;
+    padding: 73px 0 56px;
   }
   @media (max-width: $mobileSmall) {
     padding: 43px 0 20px;
@@ -39,8 +39,13 @@
     margin-right: 90px;
     padding-top: 65px;
     @media (max-width: 1600px) {
+      padding-top: 160px;
       margin-right: 0;
       flex: 0 0 percent(491, 960);
+    }
+    @media (max-width: $mobile) {
+      flex: 0 0 53.145%;
+      padding-top: 43px;
     }
     @media (max-width: 560px) {
       display: none;
@@ -87,6 +92,7 @@
       margin-bottom: 25px;
     }
     @media (max-width: $mobile) {
+      font-size: 14px;
       margin-bottom: 24px;
       li:not(:last-child) {
         margin-bottom: 14px;
@@ -126,6 +132,9 @@
     white-space: nowrap;
     font-size: 20px;
     line-height: math.div(26, 20);
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
   }
 
   &__social {
@@ -134,15 +143,27 @@
   &__decor {
     flex: 0 1 percent(834, 1600);
     @media (max-width: $pc) {
+      flex: 0 1 54.125%;
+
       margin-right: -40px;
     }
     @media (max-width: 560px) {
       margin-right: 0;
       flex: 0 1 percent(204, 320);
+      max-width: percent(204, 320);
+      margin: 0 auto;
     }
   }
 
   &__image {
+    text-align: center;
+    transform: translate(-6px, 15px);
+    @media (max-width: $pc) {
+      transform: translate(0px, 93px);
+    }
+    @media (max-width: $mobile) {
+      transform: translate(0, -8px);
+    }
   }
 }
 
@@ -169,11 +190,13 @@
   &__content {
     position: relative;
     min-width: 0;
-    flex: 0 1 948px;
-    max-width: 948px;
-    padding: 0 60px;
+    flex: 0 1 percent(828, 1600);
+    max-width: percent(828, 1600);
+    max-height: 857px;
     @media (max-width: 1200px) {
-      padding: 0;
+      flex: 0 1 percent(489, 960);
+      max-width: percent(489, 960);
+      width: 100%;
     }
     @media (max-width: $tablet) {
       max-width: 95%;
@@ -199,7 +222,6 @@
   }
 
   &__slide {
-    max-width: 948px;
     width: 100%;
     @media (max-width: $tablet) {
       text-align: center;
@@ -208,14 +230,14 @@
 
   &__controls {
     position: absolute;
-    width: 100%;
+    width: 114%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media (max-width: 1200px) {
+    @media (max-width: 1800px) {
       display: none;
     }
   }
@@ -228,19 +250,25 @@
   }
 
   &__info {
-    flex: 0 1 555px;
-    max-width: 555px;
+    flex: 0 1 580px;
+    max-width: 580px;
     width: 100%;
-    padding-top: 30px;
+    padding-top: 38px;
     margin-left: 30px;
     @media (max-width: $pc) {
-      padding-top: 0;
+      max-width: percent(433, 960);
+      flex: 0 1 percent(433, 960);
+      padding-top: 18px;
+      margin-left: 0;
     }
     @media (max-width: $tablet) {
       flex: 1 1 100%;
       max-width: 100%;
       margin-left: 0;
       margin-bottom: 30px;
+    }
+    @media (max-width: $mobile) {
+      padding-top: 0;
     }
   }
 
@@ -254,6 +282,7 @@
   &__text {
     font-size: 18px;
     line-height: math.div(32, 18);
+    max-width: 554px;
     @media (max-width: $pc) {
       font-size: 16px;
       line-height: math.div(28, 16);
@@ -266,15 +295,22 @@
 
   &__paragraph {
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
   }
+}
+
+.swiper-slide__image-ibg {
+  padding-bottom: percent(857, 828);
 }
 
 // Advantages section ========================================================================================================================================================
 
 .advantages {
-  padding: 60px 0 15px;
+  padding: 81px 0 15px;
+  @media (max-width: 1200px) {
+    padding: 0 0 15px;
+  }
   &__container {
   }
 
@@ -295,6 +331,7 @@
     flex: 0 1 33.33%;
     margin-bottom: 60px;
     @media (max-width: 1200px) {
+      margin-bottom: 10px;
       padding: 0 16px;
     }
     @media (max-width: $mobile) {
@@ -345,7 +382,13 @@
 .reviews {
   padding: 65px 0 85px;
   @media (max-width: $pc) {
-    padding-top: 5px;
+    padding: 5px 0 45px;
+  }
+  @media (max-width: $mobile) {
+    padding: 5px 0 30px;
+  }
+  @media (max-width: $mobileSmall) {
+    padding: 5px 0 20px;
   }
   &__container {
   }
@@ -415,9 +458,9 @@
 // Catalog ========================================================================================================================================================
 
 .firm-catalog {
-  padding: 56px 0 85px;
+  padding: 61px 0 85px;
   @media (max-width: $pc) {
-    padding: 10px 0 50px;
+    padding: 35px 0 50px;
   }
   @media (max-width: $mobile) {
     padding: 5px 0 35px;
@@ -426,7 +469,7 @@
   }
 
   &__title {
-    margin-bottom: 50px;
+    margin-bottom: 56px;
     @media (max-width: $pc) {
       margin-bottom: 40px;
     }
@@ -449,7 +492,7 @@
   &__title {
     font-size: 24px;
     line-height: math.div(24, 32);
-    padding: 21px 86px;
+    padding: 25px 86px 21px;
 
     &._tab-active {
       border: 1px solid #1f1f21;
@@ -457,6 +500,7 @@
       font-weight: 500;
     }
     @media (max-width: $pc) {
+      padding: 25px 93px 21px;
       font-size: 20px;
     }
     @media (max-width: $tablet) {

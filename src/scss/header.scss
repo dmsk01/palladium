@@ -38,7 +38,9 @@
   &__logo {
     position: relative;
     z-index: 5;
+    transform: translate(-8px, -5px);
     @media (max-width: $mobile) {
+      transform: translate(0px, 0px);
       width: 53px;
       height: 53px;
     }
@@ -122,6 +124,7 @@
 
   &__link {
     font-size: 20px;
+    font-weight: 400;
     line-height: math.div(27, 20);
     font-family: "Playfair Display", serif;
     @media (max-width: $pc) {

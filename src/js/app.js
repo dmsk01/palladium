@@ -95,7 +95,7 @@ import * as flsForms from "./files/forms/forms.js";
 Документация плагина: https://github.com/RobinHerbots/inputmask
 Сниппет(HTML):
 */
-// import "./files/forms/inputmask.js";
+import "./files/forms/inputmask.js";
 
 /* Модуль работы с ползунком */
 /*
@@ -153,7 +153,7 @@ import "./files/sliders.js";
 import * as flsScroll from "./files/scroll/scroll.js";
 
 // Плавная навигация по странице
-// flsScroll.pageNavigation();
+flsScroll.pageNavigation();
 
 // Функционал добавления классов к хедеру при прокрутке
 // flsScroll.headerScroll();
