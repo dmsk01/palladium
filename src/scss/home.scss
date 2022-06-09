@@ -652,12 +652,14 @@
   }
 }
 
-.case-1 {
+.case {
   &__slider {
     min-width: 0;
   }
   &__swiper {
     min-width: 0;
+  }
+  &__wrapper {
   }
   &__slide {
     min-width: 0;
@@ -682,9 +684,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     @media (max-width: 1800px) {
       display: none;
     }
+  }
+  &__description {
+    max-width: 915px;
+    margin: 25px auto 0;
+    width: 100%;
+    font-size: 18px;
+    line-height: math.div(32, 18);
   }
 }
 
@@ -706,5 +716,18 @@
 
   &__wrapper {
     width: 100%;
+  }
+}
+
+.description-case {
+  &__text {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  &__materials {
+    tr > td {
+      padding: 3px 10px;
+    }
   }
 }
