@@ -1,4 +1,3 @@
-
 import Swiper, { Navigation, Pagination, EffectFade } from "swiper";
 /*
 Основниые модули слайдера:
@@ -189,10 +188,12 @@ function initSliders() {
       modules: [Navigation, Pagination],
       observer: true,
       observeParents: true,
+      observeSlideChildren: true,
       // slidesPerView: "auto",
       spaceBetween: 16,
       autoHeight: false,
       speed: 800,
+      watchOverflow: true,
 
       pagination: {
         el: elementPagginatiopn,
