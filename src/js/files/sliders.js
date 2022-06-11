@@ -179,11 +179,11 @@ function initSliders() {
     const elementPrevButton = caseBody.querySelector(
       ".case-swiper-button-prev"
     );
+
     const elementNextButton = caseBody.querySelector(
       ".case-swiper-button-next"
     );
     const elementPagginatiopn = caseBody.querySelector(".case__paggination");
-
     new Swiper(element, {
       modules: [Navigation, Pagination],
       observer: true,
@@ -193,6 +193,7 @@ function initSliders() {
       spaceBetween: 16,
       autoHeight: false,
       speed: 800,
+      loop: true,
       watchOverflow: true,
 
       pagination: {
